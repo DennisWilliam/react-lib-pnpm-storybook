@@ -4,6 +4,7 @@ env:
 extends:
   - plugin:react/recommended
   - airbnb
+  - prettier
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
@@ -13,4 +14,91 @@ parserOptions:
 plugins:
   - react
   - '@typescript-eslint'
-rules: {}
+settings:
+  import/parsers:
+    '@typescript-eslint/parser':
+      - '.ts'
+      - '.tsx'
+    node:
+      project:
+        - tsconfig.json
+        - package/tsconfig.json
+rules:
+  no-use-before-define: warn
+  '@typescript-eslint/no-explicit-any': warn
+  '@typescript-eslint/explicit-module-boundary-types': off
+  indent:
+    - error
+    - tab
+    - SwitchCase: 1
+  linebreak-style:
+    - error
+    - windows
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - never
+  no-trailing-spaces: error
+  space-infix-ops: error
+  no-unused-vars: warn # TODO error
+  object-curly-spacing:
+    - error
+    - always
+    - arraysInObjects: false
+      objectsInObjects: false
+  array-bracket-spacing:
+    - error
+    - never
+  arrow-spacing:
+    - error
+    - before: true
+      after: true
+  block-spacing:
+    - error
+    - always
+  computed-property-spacing:
+    - error
+    - never
+  comma-spacing:
+    - error
+    - before: false
+      after: true
+  keyword-spacing:
+    - error
+    - before: true
+      after: true
+      overrides:
+        case:
+          after: false
+  space-before-function-paren:
+    - error
+    - anonymous: never
+      named: never
+      asyncArrow: always
+  no-multi-spaces:
+    - error
+    - ignoreEOLComments: true
+  # - Property: true # TODO: Habilitar qdo atualizar o eslint
+  eol-last:
+    - error
+    - always
+  no-unused-expressions:
+    - off #TODO: error; Necessário estar off até a atualização do eslint
+    - allowShortCircuit: true
+      allowTernary: true
+  array-callback-return:
+    - warn #TODO: error
+    - allowImplicit: true
+      # checkForEach: true #TODO: Habilitar qdo atualizar o eslint
+  consistent-return: warn #TODO: error
+  no-return-await: warn #TODO: error
+  no-useless-return: warn #TODO: error
+  react/hook-use-state: warn
+  react/prop-types: off # TODO: Habilitar qdo atualizar o eslint?
+  react/react-in-jsx-scope: off
+  react/jsx-filename-extension:
+    - 1
+    - extensions:
+        - '.tsx'
