@@ -1,13 +1,13 @@
 {
-  "recommendations": [
-    "waderyan.nodejs-extension-pack",
-    "dbaeumer.vscode-eslint",
-    "mikestead.dotenv",
-    "formulahendry.terminal",
-    "aaron-bond.better-comments",
-    "usernamehw.errorlens",
-    "mhutchie.git-graph",
-    "eamodio.gitlens",
-    "esbenp.prettier-vscode"
-  ]
+	"recommendations": [
+		"waderyan.nodejs-extension-pack",
+		"dbaeumer.vscode-eslint",
+		"mikestead.dotenv",
+		"formulahendry.terminal",
+		"aaron-bond.better-comments",
+		"usernamehw.errorlens",
+		"mhutchie.git-graph",
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode"
+	]
 }
