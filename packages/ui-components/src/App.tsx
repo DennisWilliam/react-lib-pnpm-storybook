@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import viteLogo from '../../../../../../../vite.svg'
 import './App.css'
 import reactLogo from './assets/react.svg'
 
-function App() {
+const App = () => {
 	const [count, setCount] = useState(0)
+
+	useEffect(() => {
+		setCount(2)
+	}, [])
 
 	return (
 		<>
