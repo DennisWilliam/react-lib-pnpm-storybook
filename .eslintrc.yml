@@ -131,3 +131,4 @@ rules:
     - 2
     - namedComponents: arrow-function
       unnamedComponents: function-expression
+  react/button-has-type: off
